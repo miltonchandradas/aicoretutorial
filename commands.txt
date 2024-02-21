@@ -6,9 +6,8 @@ aws configure
 
 aws s3 cp irisdataset.csv s3://hcp-901fd5ae-0a34-4ecf-9598-db28f5bfa794/aicoretutorial/trainingdata/irisdataset.csv
 aws s3 ls s3://hcp-901fd5ae-0a34-4ecf-9598-db28f5bfa794/aicoretutorial/trainingdata/
+aws s3 ls s3://hcp-901fd5ae-0a34-4ecf-9598-db28f5bfa794/aicoretutorial/eb18d896814feb9a/irismodel/
 
 aws s3api get-object --bucket hcp-901fd5ae-0a34-4ecf-9598-db28f5bfa794 --key aicoretutorial/trainingdata/irisdataset.csv downloaded_irisdataset.csv
-
-
 
 git checkout 2_training_pipeline && git rebase main
