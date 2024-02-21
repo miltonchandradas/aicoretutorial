@@ -2,10 +2,11 @@
 # You may find more base layers at https://hub.docker.com/
 FROM python:3.12
 #
-# Don't place anything in below folders yet, just create them
-RUN mkdir -p /app/model/
 # Creates directory within your Docker image
 RUN mkdir -p /app/src/
+# Don't place anything in below folders yet, just create them
+RUN mkdir -p /app/data/
+RUN mkdir -p /app/model/
 
 #
 # Copies file from your Local system TO path in Docker image

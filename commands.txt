@@ -3,5 +3,8 @@ docker push docker.io/miltonc/iris-ai-training-image:01
 
 
 aws configure
-aws s3 cp irisdataset.csv s3://hcp-901fd5ae-0a34-4ecf-9598-db28f5bfa794/aicoretutorial/dataset/irisdataset.csv
-aws s3 ls s3://hcp-901fd5ae-0a34-4ecf-9598-db28f5bfa794/aicoretutorial/dataset/
+
+aws s3 cp irisdataset.csv s3://hcp-901fd5ae-0a34-4ecf-9598-db28f5bfa794/aicoretutorial/trainingdata/irisdataset.csv
+aws s3 ls s3://hcp-901fd5ae-0a34-4ecf-9598-db28f5bfa794/aicoretutorial/trainingdata/
+
+aws s3api get-object --bucket hcp-901fd5ae-0a34-4ecf-9598-db28f5bfa794 --key aicoretutorial/trainingdata/irisdataset.csv downloaded_irisdataset.csv

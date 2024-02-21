@@ -13,7 +13,7 @@ metadata:
     artifacts.ai.sap.com/irismodel.kind: "model" # Helps in suggesting the kind of artifact that can be generated.
   labels:
     scenarios.ai.sap.com/id: "iris-classifier-scenario"
-    ai.sap.com/version: "2.0"
+    ai.sap.com/version: "3.0"
 spec:
   imagePullSecrets:
     - name: milton-credentials # your docker registry secret
@@ -42,7 +42,7 @@ spec:
             none:   # specify not to compress while uploading to cloud
               {}
     container:
-      image: docker.io/miltonc/iris-ai-training-image:01 # Your docker image name
+      image: docker.io/miltonc/iris-ai-training-image:03 # Your docker image name
       command: ["/bin/sh", "-c"]
       env:
         - name: CLASS_LABEL # name of the environment variable inside Docker container
