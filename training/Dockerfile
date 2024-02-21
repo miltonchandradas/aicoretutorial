@@ -10,8 +10,9 @@ RUN mkdir -p /app/model/
 
 #
 # Copies file from your Local system TO path in Docker image
+COPY requirements.txt /app/src/ 
 COPY main.py /app/src/
-COPY requirements.txt /app/src/  
+ 
 #
 # Installs dependencies within you Docker image
 RUN pip3 install -r /app/src/requirements.txt

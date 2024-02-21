@@ -3,7 +3,7 @@ import pandas as pd
 
 # Variables
 DATA_PATH = '/app/data/irisdataset.csv'
-CLASS_PATH= int(os.getenv('CLASS_PATH'))
+CLASS_LABEL= int(os.getenv('CLASS_LABEL'))
 KERNEL= os.getenv('KERNEL')
 MODEL_PATH = '/app/model/model.pkl'
 
@@ -20,7 +20,7 @@ train_x, test_x, train_y, test_y = train_test_split(X, y, test_size=0.3)
 
 # Init model
 from sklearn import svm
-model = svm.SVC(C=CLASS_PATH, kernel=KERNEL)
+model = svm.SVC(C=CLASS_LABEL, kernel=KERNEL)
 # model = svm.SVC(C=1, kernel="rbf")
 
 # Train model
