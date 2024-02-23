@@ -12,7 +12,7 @@ metadata:
     artifacts.ai.sap.com/irismodel.kind: "model" # Suggest the kind of artifact to input.
   labels:
     scenarios.ai.sap.com/id: "iris-classifier-scenario"
-    ai.sap.com/version: "1.0"
+    ai.sap.com/version: "2.0"
 spec:
   inputs:
     artifacts:
