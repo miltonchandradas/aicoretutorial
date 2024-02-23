@@ -6,7 +6,7 @@ metadata:
     scenarios.ai.sap.com/name: "Iris DataSet Classifier Scenario" # Scenario name should be the use case
     scenarios.ai.sap.com/description: "SAP AI Core tutorial to classify the popular iris dataset"
 
-    executables.ai.sap.com/name: "Iris model serving" # Executable name should describe the workflow in the use case  
+    executables.ai.sap.com/name: "irismodelserving" # Executable name should describe the workflow in the use case  
     executables.ai.sap.com/description: "Serving with popular iris dataset"
 
     artifacts.ai.sap.com/irismodel.kind: "model" # Suggest the kind of artifact to input.
