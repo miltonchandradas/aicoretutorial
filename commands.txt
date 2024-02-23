@@ -1,6 +1,9 @@
 docker build -t docker.io/miltonc/iris-ai-training-image:03 .
 docker push docker.io/miltonc/iris-ai-training-image:03
 
+docker build -t docker.io/miltonc/iris-ai-serving-image:01 .
+docker push docker.io/miltonc/iris-ai-serving-image:01
+
 
 aws configure
 
@@ -11,3 +14,4 @@ aws s3 ls s3://hcp-901fd5ae-0a34-4ecf-9598-db28f5bfa794/aicoretutorial/eb18d8968
 aws s3api get-object --bucket hcp-901fd5ae-0a34-4ecf-9598-db28f5bfa794 --key aicoretutorial/trainingdata/irisdataset.csv downloaded_irisdataset.csv
 
 git checkout 2_training_pipeline && git rebase main
+git push -u -f origin 2_training_pipeline
