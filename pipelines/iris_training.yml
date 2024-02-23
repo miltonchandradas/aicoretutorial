@@ -24,11 +24,6 @@ spec:
         - name: KERNEL # identifier local to this workflow
   templates:
   - name: mypipeline
-    steps:
-    - - name: mypredictor
-        template: mycodeblock1
-
-  - name: mycodeblock1
     inputs:
       artifacts:  # placeholder for cloud storage attachements
         - name: irisdataset # a name for the placeholder
