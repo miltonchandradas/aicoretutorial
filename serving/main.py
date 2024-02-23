@@ -48,7 +48,7 @@ def predict():
     global sepal_length
     global sepal_width
     
-    print("Docker image version is 2.0")
+    print("Docker image version is 4.0")
 
     if model is None:
         return "Flask Code: Model was not loaded."
@@ -64,11 +64,12 @@ def predict():
             # (trailing comma) <,> to make batch with 1 observation
             [attributes]
         )
-        if str(prediction) == "[0]":
+        
+        if str(prediction) == "['Setosa']":
             flower = "Setosa"
-        elif str(prediction) == "[1]":
+        elif str(prediction) == "['Versicolor']":
             flower = "Veriscolor"
-        elif str(prediction) == "[2]":
+        elif str(prediction) == "['Virginica']":
             flower = "Virginica"
         else:
             flower = "Unknown"

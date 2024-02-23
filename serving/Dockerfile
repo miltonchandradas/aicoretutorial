@@ -5,8 +5,8 @@ ENV LANG C.UTF-8
 
 # Custom location to place code files
 RUN mkdir -p /app/src
-COPY requirements.txt /app/src/requirements.txt
 COPY main.py /app/src/main.py
+COPY requirements.txt /app/src/requirements.txt
 RUN pip3 install -r /app/src/requirements.txt
 
 # Required to execute script
