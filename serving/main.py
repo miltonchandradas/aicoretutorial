@@ -47,6 +47,8 @@ def predict():
     global petal_width
     global sepal_length
     global sepal_width
+    
+    print("Docker image version is 2.0")
 
     if model is None:
         return "Flask Code: Model was not loaded."
@@ -57,9 +59,10 @@ def predict():
         petal_length = query["PetalLengthCm"]
         petal_width = query["PetalWidthCm"]
         attributes = [sepal_length, sepal_width, petal_length, petal_width]
+        print("Attributes: ", [attributes])
         prediction = model.predict(
             # (trailing comma) <,> to make batch with 1 observation
-            np.array([list(map(float, attributes)),])
+            [attributes]
         )
         if str(prediction) == "[0]":
             flower = "Setosa"
