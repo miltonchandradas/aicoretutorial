@@ -18,4 +18,5 @@ git checkout 2_training_pipeline && git rebase main
 git push -u -f origin 2_training_pipeline
 
 
-
+git checkout 3_serving_pipeline && git rebase main
+git push -u -f origin 3_serving_pipeline
