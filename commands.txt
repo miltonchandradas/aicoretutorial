@@ -16,3 +16,6 @@ aws s3api get-object --bucket hcp-901fd5ae-0a34-4ecf-9598-db28f5bfa794 --key aic
 
 git checkout 2_training_pipeline && git rebase main
 git push -u -f origin 2_training_pipeline
+
+
+
